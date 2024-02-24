@@ -1,11 +1,8 @@
 // Express imports
 const multer = require("multer");
 
-// Modal imports
-const Uploads = require("../Models/uploader");
-
 // Normal imports
-const upload = require("../Models/uploader");
+const Uploads = require("../Models/uploader");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
