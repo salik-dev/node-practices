@@ -1,7 +1,12 @@
 const express = require("express");
 
-const app = express();
+// Import DB connections
+require("./connectDB/conn");
 
-app.listen(process.env.port, () => {
-  console.log(`app is listening on port: ${process.env.port}`);
+// App imports
+const app = require("./app");
+
+const port = process.env.PORT || 8080;
+const server = app.listen(port, () => {
+  console.log(`node.js server is running on port: ${port}`);
 });
